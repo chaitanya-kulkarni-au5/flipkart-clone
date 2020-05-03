@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="">
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary sticky-top">
+        <a class="navbar-brand font-weight-lighter text-light" href="/home">Flipkart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        </div>
+        <input type="text" class="form-control offset-3 col-4 " aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" placeholder="Search">
+
+        <div class="collapse navbar-collapse offset-1 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="/addproduct" class="btn-sm text-light" type="button">Add Product</a></li>
+                <li>
+                    <div class="btn-group">
+                        <a href="#" class="btn-sm btn-outline-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                        <div class=" dropdown-menu dropdown-menu-right">
+                            <a href="/profile" class="dropdown-item" type="button">My Profile</a>
+                            <a href="/logout" class="dropdown-item" type="button">Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="btn-sm text-light" type="button">Cart</a></li>
+            </ul>
+
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-8 offset-2 mt-3 h-100 mt-5 ml-5 pt-5">
+                <p><a href="#"><i id="edit" class="fa fa-pencil float-right">Edit Profile</i></a></p>
+                <p class="col-md-6">First Name: <span> {{user.name}}</span></p>
+                <p class="col-md-6">Last Name: <span> {{user.lastname}}</span></p>
+                <p class="col-md-6">Phone: <span> {{user.phone}}</span></p>
+                <p class="col-md-6">Email: <span> {{user.email}}</span></p>
+            </div>
+
+
+            <!-- The Modal -->
+
+        </div>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Update</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <form method="POST" action="/userupdate">
+                        <div class="modal-body">
+                            <input type="text" class="form-control mt-3" id="name" name="name" placeholder="first name" value="{{user.name}}">
+                            <input type="text" class="form-control mt-3" id="lastname" name="lastname" placeholder="last name" value="{{user.lastname}}">
+                            <input type="tel" class="form-control mt-3" id="phone" name="phone" placeholder="phone" value="{{user.phone}}">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-sm btn-outline-info" id='button'>Update</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+<script src='js/profile.js'></script>
+
+</html>

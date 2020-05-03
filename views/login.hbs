@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flipkart Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .box {
+            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+        }
+
+        body {
+            background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+            height: 100vh;
+        }
+
+        .btn-grad {
+            background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 offset-md-4 border border-muted p-5 rounded box shadow-lg">
+                <h3 class="text-center mt-3 mb-4 font-weight-lighter">Flipkart Login</h3>
+                <form action="/userlogin" method="POST">
+                    <input class="form-control border border-muted mt-3 font-weight-lighter" type="email"
+                        placeholder="Email" name="email" required>
+                    <input class="form-control border border-muted mt-3 font-weight-lighter" type="password"
+                        placeholder="Password" name="password" required>
+                    <button type="submit"
+                        class="btn btn-sm btn-outline-info mt-3 d-inline font-weight-lighter">Log in</button>
+                    <div class="d-inline float-right mt-4 font-weight-lighter">New User? <a class="text-info"
+                            href="/signup">Sign up</a>.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

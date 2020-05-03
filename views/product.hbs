@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .row {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary sticky-top">
+        <a class="navbar-brand font-weight-lighter text-light" href="/home">Flipkart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        </div>
+        <input type="text" class="form-control offset-3 col-4 " aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" placeholder="Search">
+
+        <div class="collapse navbar-collapse offset-1 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="/addproduct" class="btn-sm text-light" type="button">Add Product</a></li>
+                <li>
+                    <div class="btn-group">
+                        <a href="#" class="btn-sm btn-outline-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                        <div class=" dropdown-menu dropdown-menu-right">
+                            <a href="/profile" class="dropdown-item" type="button">My Profile</a>
+                            <a href="/logout" class="dropdown-item" type="button">Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="btn-sm text-light" type="button">Cart<span class="badge badge-danger"></span></a></li>
+            </ul>
+
+
+        </div>
+    </nav>
+    <div class="row mt-5">
+        <div class="col-3 offset-1">
+            <img class="border border-muted w-100" src="{{product.photo}}">
+            <div class="row">
+                    <button type="button" id="button" class="btn btn-danger mt-3 w-50">Add to cart</button>
+                    <button type="button" class="btn btn-warning mt-3 w-50">Buy Now</button>
+            </div>
+        </div>
+        <div class="col-5">
+            <h5 class="text-left">{{product.name}}</h5>
+            <p class="bg-success d-inline p-2">{{product.rating}}</p>
+            <p class="mt-5"><span><strong>Rs. {{product.price}}</strong></span><del class="ml-2">Rs. {{product.originalprice}}</del></p>
+            <ul>
+            </ul>
+            <p>{{product.desc}}</p>
+            <ul>
+                {{#each product.highlights}}
+                <li>{{this}}</li>
+                {{/each}}
+            
+            </ul>
+            
+
+        </div>
+    </div>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+            var count=0
+            $("#button").click(function () {
+                $(".badge").text(++count)
+               $("#cart").attr("id","change")
+               $("#change").text("Go to cart")
+               $("#change").off("click")
+                
+            })
+        });
+
+</script>
+</body>
+
+</html>

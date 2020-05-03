@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="">
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary sticky-top">
+        <a class="navbar-brand font-weight-lighter text-light" href="/home">Flipkart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        </div>
+        <input type="text" class="form-control offset-3 col-4 " aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" placeholder="Search">
+
+        <div class="collapse navbar-collapse offset-1 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="/addproduct" class="btn-sm text-light" type="button">Add Product</a></li>
+                <li>
+                    <div class="btn-group">
+                        <a href="#" class="btn-sm btn-outline-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                        <div class=" dropdown-menu dropdown-menu-right">
+                            <a href="/profile" class="dropdown-item" type="button">My Profile</a>
+                            <a href="/logout" class="dropdown-item" type="button">Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="btn-sm text-light" type="button">Cart</a></li>
+            </ul>
+
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h3 class="font-weight-lighter">Add Product</h3>
+                <form class="mt-3" id='form' action="/addproduct" method="POST" enctype="multipart/form-data">
+                    <input type="file" class="form-control mt-3" name="photo" placeholder="photo" required>
+                    <input type="text" class="form-control mt-3" name="name" placeholder="Product Name" required>
+                    <textarea class="form-control mt-3" name="desc" placeholder="Product Description"></textarea>
+                    <input type="number" class="form-control mt-3" name="rating" placeholder="Rating" required>
+                    <input type="number" class="form-control mt-3" name="price" placeholder="Product Price" required>
+                    <input type="number" class="form-control mt-3" name="originalprice" placeholder="Original Price"
+                        required>
+                    <input type="text" class="form-control mt-3" name="category" placeholder="Category" required>
+                    <input type="text" class="form-control mt-3 highlights" name="highlights"
+                        placeholder="Add Highlight">
+                    <button type="button" class="btn btn-sm btn-info mt-2" id="addhighlight">Add
+                        Highlight</button>
+
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3 offset-md-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="deals" class="custom-control-input"
+                                    value="dealsoftheday" required>
+                                <label class="custom-control-label" for="customRadioInline1">Deals of the Day</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="deals" class="custom-control-input"
+                                    value="topselection" required>
+                                <label class="custom-control-label" for="customRadioInline2">Top Selection</label>
+                            </div>
+                        </div>
+                    </div>
+                     <button type="submit" class="btn btn-outline-info mt-3 mb-3 w-100">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src='js/addproduct.js'></script>
+
+</html>
